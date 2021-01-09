@@ -1,4 +1,6 @@
-const activitiesURL = "http://localhost:3000/api/v1/activities";
+// const activitiesURL = "http://localhost:3000/api/v1/activities";
+const activitiesURL =
+  "https://what-should-we-do-backend.herokuapp.com/api/v1/activities";
 const activitiesContainer = document.getElementById("activity-container");
 const mySidebar = document.getElementById("mySidebar");
 const unlike = "♡";

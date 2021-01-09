@@ -1,4 +1,7 @@
-const commentsURL = "http://localhost:3000/api/v1/comments";
+// const commentsURL = "http://localhost:3000/api/v1/comments";
+const commentsURL =
+  "https://what-should-we-do-backend.herokuapp.com/api/v1/comments";
+
 const modal = document.getElementById("myModal");
 const commentContainer = modal.querySelector(".comment-value");
 const commentList = modal.querySelector(".comment-list");
