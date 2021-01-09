@@ -12,6 +12,11 @@
   margin: 5px;
   color: #1c3b63;
 }
+/* * {
+  font-family: "Lato";
+  margin: 5px;
+  color: #1c3b63;
+} */
 
 #main {
   transition: margin-left 0.5s;
@@ -239,7 +244,6 @@ body {
   font-weight: normal;
   font-size: 1.5em;
 }
-
 
 .modal-content .image {
   height: 10em;
