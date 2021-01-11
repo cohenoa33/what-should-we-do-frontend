@@ -81,16 +81,31 @@ function createNewActivity() {
   const form = document.getElementById("new-Activity-Form");
   form.onsubmit = function (event) {
     event.preventDefault();
+
+    const capitalize = (s) => {
+      if (typeof s !== "string") return "";
+      let stringFromS = s.split(" ");
+      let result = [];
+      for (let i = 0; i < stringFromS.length; i++) {
+        result.push(
+          stringFromS[i].charAt(0).toUpperCase() + stringFromS[i].slice(1)
+        );
+      }
+      return result.join(" ");
+    };
     const formFiled = event.target.children;
 
-    const name = formFiled[0].value;
-    const address = formFiled[1].value;
-    const city = formFiled[2].value;
-    const state = formFiled[3].value;
+    const name = capitalize(formFiled[0].value);
+    const address = capitalize(formFiled[1].value);
+    const city = capitalize(formFiled[2].value);
+    const state = capitalize(formFiled[3].value);
     const zipcode = formFiled[4].value;
     const description = formFiled[5].value;
     const image = formFiled[6].value;
-    const category = formFiled[7].value;
+    const category =
+      formFiled[7].value === ""
+        ? "No Category"
+        : capitalize(formFiled[7].value);
 
     const body = {
       activity: {
