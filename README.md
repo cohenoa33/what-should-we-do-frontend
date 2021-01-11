@@ -31,7 +31,10 @@ Users can:
 
 - View all the places they have visited on the map
 
-**How To Install** 
+
+**[What Should We Do](https://what-sholud-we-do.surge.sh/)**
+
+**How To Install**
 1. Clone the repository to your machine.
 2. `$ bundle install`
 3. `$ db:migrate`
