@@ -7,7 +7,7 @@ What Should We Do is an activity journal that helps users log everywhere they vi
 ![what should we do img](https://i.imgur.com/9Cuydg6.png)
 
 
-**Features**
+## Features
 
 Users can:
 - Enter their information to have it updated on the map
@@ -32,14 +32,14 @@ Users can:
 - View all the places they have visited on the map
 
 
-**[Live App](https://what-sholud-we-do.surge.sh/)**
+## [Live App](https://what-sholud-we-do.surge.sh/)
 
-**How To Install**
+## How To Install
 1. Clone the repository to your machine.
 2. `$ bundle install`
 3. `$ db:migrate`
 4. `$ db:seed`
 5. Run `rails s` to start the server and open index.html on your browser.
 
-
-To view the backend, [click here](https://github.com/cohenoa33/what-should-we-do-backend)
+## Backend
+[GitHub repo](https://github.com/cohenoa33/what-should-we-do-backend)
