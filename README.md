@@ -32,7 +32,7 @@ Users can:
 - View all the places they have visited on the map
 
 
-**[What Should We Do](https://what-sholud-we-do.surge.sh/)**
+**[Live App](https://what-sholud-we-do.surge.sh/)**
 
 **How To Install**
 1. Clone the repository to your machine.
