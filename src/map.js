@@ -51,9 +51,23 @@ function geocodeAddress(geocoder, resultsMap) {
 
 function addMarkers(activity) {
   const iconBase = `icons/`;
+  const categoryList = [
+    "bar",
+    "bowling",
+    "coffee",
+    "dog-park",
+    "food",
+    "gym",
+    "icecream",
+    "movie",
+    "music",
+    "nightclub",
+    "shopping",
+  ];
   let category = activity.category.toLowerCase();
-  if (category === "no category") category = "no-category";
+  if (!categoryList.includes(category)) category = "no-category";
   const image = `${iconBase}${category}-icon.png`;
+  console.log(!categoryList.includes(category), category);
   var marker = new google.maps.Marker({
     map: map,
     draggable: false,
