@@ -45,9 +45,14 @@ function geocodeAddress(geocoder, resultsMap) {
 //       activities.forEach((activity) => addMarkers(activity))
 //     );
 // }
+{
+  /* <link rel="shortcut icon" type="image/png" href="icons/logo_logo.png" />; */
+}
+
 function addMarkers(activity) {
   const iconBase = `icons/`;
-  const image = `${iconBase}${activity.category}-icon.png`;
+  const category = activity.category.toLowerCase();
+  const image = `${iconBase}${category}-icon.png`;
   var marker = new google.maps.Marker({
     map: map,
     draggable: false,
