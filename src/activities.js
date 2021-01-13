@@ -1,12 +1,18 @@
+const capitalize = (s) => {
+  if (typeof s !== "string") return "";
+  return s.charAt(0).toUpperCase() + s.slice(1);
+};
+
 function appendCategory(item) {
   let options = document.getElementById(item);
-  item = item.replace(/[^A-Za-z0-9-']+/g, "");
+  // item = item.replace(/[^A-Za-z0-9-']+/g, "");
   if (options === null) {
     const dropdown = document.querySelector(".dropdown");
     const option = document.createElement("option");
-    option.innerText = item;
-    option.value = item;
+    option.innerText = capitalize(item);
+    option.value = capitalize(item);
     option.id = item;
+
     dropdown.appendChild(option);
   }
 }
@@ -21,7 +27,9 @@ function sortByCategory() {
       if (category === "show all") {
         activity.style.display = "inline-grid";
       } else {
-        if (activity.children[4].textContent === category) {
+        if (
+          capitalize(activity.children[4].textContent) === capitalize(category)
+        ) {
           activity.style.display = "inline-grid";
         } else {
           activity.style.display = "none";

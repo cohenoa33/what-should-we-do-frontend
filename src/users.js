@@ -21,6 +21,7 @@ function closeFloatingPanel() {
         greeting.remove();
         nameContainer.style.display = "inline";
       });
+      floatingPanel.className = "hidden";
     }
   });
 }

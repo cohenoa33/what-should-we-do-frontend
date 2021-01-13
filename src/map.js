@@ -17,6 +17,7 @@ function initMap() {
     zoom: 15,
     center: myLatLng,
   });
+
   const geocoder = new google.maps.Geocoder();
   document.getElementById("submit").addEventListener("click", () => {
     geocodeAddress(geocoder, map);
@@ -45,9 +46,28 @@ function geocodeAddress(geocoder, resultsMap) {
 //       activities.forEach((activity) => addMarkers(activity))
 //     );
 // }
+{
+}
+
 function addMarkers(activity) {
   const iconBase = `icons/`;
-  const image = `${iconBase}${activity.category}-icon.png`;
+  const categoryList = [
+    "bar",
+    "bowling",
+    "coffee",
+    "dog-park",
+    "food",
+    "gym",
+    "icecream",
+    "movie",
+    "music",
+    "nightclub",
+    "shopping",
+  ];
+  let category = activity.category.toLowerCase();
+  if (!categoryList.includes(category)) category = "no-category";
+  const image = `${iconBase}${category}-icon.png`;
+  console.log(!categoryList.includes(category), category);
   var marker = new google.maps.Marker({
     map: map,
     draggable: false,
@@ -70,9 +90,3 @@ function listenforMarkerClick() {
     map.panTo(marker.getPosition());
   });
 }
-
-// function panMarker(event) {
-//   debugger;
-
-//   console.log(event);
-// }
